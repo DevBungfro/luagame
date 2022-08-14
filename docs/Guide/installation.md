@@ -1,6 +1,4 @@
 
-# Installation
-
 It is recommended to put the module, in `ReplicatedStorage`, as the client will be using it.
 
 ### How do I install the module?

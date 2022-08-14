@@ -1,17 +1,10 @@
-# Home
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the offical documentation for `luagame`.
 
-## Commands
+## What is luagame?
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+luagame is a 2d game library for `Roblox`, it makes making 2d games in roblox.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Current games that use Luagame
+ - None
+ - If you want your game to be here, contact `Bungfro#1519` on discord.

@@ -2,6 +2,8 @@
 
 site_name: Luagame
 repo_url: https://github.com/devbungfro/luagame
+edit_uri: ""
+site_url: https://luagame.bungfro.com/
 repo_name: devbungfro/luagame
 
 nav: 
@@ -9,7 +11,6 @@ nav:
  - Guide: 
     - Installation: Guide/installation.md
     - Basic Example: Guide/basic_example.md
-
 
 theme:
   name: material
@@ -20,3 +21,7 @@ theme:
     accent: indigo
   
   favicon: assets/icon.png
+
+markdown_extensions:
+  - admonition
+  - codehilite
