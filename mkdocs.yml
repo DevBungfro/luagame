@@ -6,22 +6,26 @@ edit_uri: ""
 site_url: https://luagame.bungfro.com/
 repo_name: devbungfro/luagame
 
-nav: 
- - Home: index.md
- - Guide: 
-    - Installation: Guide/installation.md
-    - Basic Example: Guide/basic_example.md
+nav:
+  - Home: index.md
+  - Guide:
+      - Installation: Guide/installation.md
+      - Basic Example: Guide/basic_example.md
 
 theme:
   name: material
-  
-  palette: 
-    scheme: default
+  features:
+    - content.code.annotate
+  palette:
+    scheme: slate
     primary: blue
-    accent: indigo
-  
+
   favicon: assets/icon.png
 
 markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - tables
   - admonition
-  - codehilite
+  - pymdownx.inlinehilite
