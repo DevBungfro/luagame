@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: Luagame
+repo_url: https://github.com/devbungfro/luagame
+repo_name: devbungfro/luagame
+
+nav: 
+ - Home: index.md
+ - Guide: 
+    - Installation: Guide/installation.md
+    - Basic Example: Guide/basic_example.md
+
+copyright: Copyright &copy; 2022 Bungfro
+theme:
+  name: material
+  
+  palette: 
+    scheme: default
+    primary: blue
+    accent: indigo
+  
+  favicon: assets/icon.png
