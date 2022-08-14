@@ -10,7 +10,7 @@ nav:
     - Installation: Guide/installation.md
     - Basic Example: Guide/basic_example.md
 
-copyright: Copyright &copy; 2022 Bungfro
+
 theme:
   name: material
   
