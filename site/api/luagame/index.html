@@ -1,0 +1,1986 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://luagame.bungfro.com/api/luagame/">
+      
+      <link rel="icon" href="../../assets/icon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+    
+    
+      
+        <title>luagame - Luagame</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#luagame-methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Luagame" class="md-header__button md-logo" aria-label="Luagame" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Luagame
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              luagame
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/devbungfro/luagame" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    devbungfro/luagame
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Luagame" class="md-nav__button md-logo" aria-label="Luagame" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Luagame
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/devbungfro/luagame" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    devbungfro/luagame
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/basic_example/" class="md-nav__link">
+        Basic Example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/basic_example_pong/" class="md-nav__link">
+        Basic Example: Pong!
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          luagame
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        luagame
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#luagame-methods" class="md-nav__link">
+    Luagame methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Luagame methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luagameinit" class="md-nav__link">
+    luagame.init()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luagamemain_gui" class="md-nav__link">
+    luagame.main_gui
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keycodes" class="md-nav__link">
+    KeyCodes
+  </a>
+  
+    <nav class="md-nav" aria-label="KeyCodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k_keycode" class="md-nav__link">
+    K_KeyCode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../display/" class="md-nav__link">
+        display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../draw/" class="md-nav__link">
+        draw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprite/" class="md-nav__link">
+        sprite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../font/" class="md-nav__link">
+        font
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key/" class="md-nav__link">
+        key
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#luagame-methods" class="md-nav__link">
+    Luagame methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Luagame methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luagameinit" class="md-nav__link">
+    luagame.init()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luagamemain_gui" class="md-nav__link">
+    luagame.main_gui
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keycodes" class="md-nav__link">
+    KeyCodes
+  </a>
+  
+    <nav class="md-nav" aria-label="KeyCodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k_keycode" class="md-nav__link">
+    K_KeyCode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>luagame</h1>
+
+<h2 id="luagame-methods">Luagame methods<a class="headerlink" href="#luagame-methods" title="Permanent link">&para;</a></h2>
+<h3 id="luagameinit">luagame.init()<a class="headerlink" href="#luagameinit" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Store the <code>luagame</code> module in <code>ReplicatedStorage</code> so the client can access it.</p>
+</div>
+<p><div class="highlight"><pre><span></span><code><span class="n">luagame</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+</code></pre></div>
+This will call all necessary functions in luagame.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Call this method before anything else, not doing so will result in unexpected behaviour.</p>
+</div>
+<h3 id="luagamemain_gui">luagame.main_gui<a class="headerlink" href="#luagamemain_gui" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">luagame</span><span class="p">.</span><span class="n">main_gui</span> <span class="o">-&gt;</span> <span class="n">GuiObject</span>
+</code></pre></div>
+<p>This is the main gui used for displaying surfaces. This is not a function.</p>
+<h2 id="keycodes">KeyCodes<a class="headerlink" href="#keycodes" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Luagame has every KeyCode that you can think of, there is no limitation on what keycode you want to use.</p>
+</div>
+<h3 id="k_keycode">K_<a href="https://create.roblox.com/docs/reference/engine/enums/KeyCode">KeyCode</a><a class="headerlink" href="#k_keycode" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">luagame</span><span class="p">.</span><span class="n">K_KeyCode</span> <span class="o">-&gt;</span> <span class="n">Enum</span><span class="p">.</span><span class="n">Keycode</span>
+<span class="c1">-- https://create.roblox.com/docs/reference/engine/enums/KeyCode</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unknown</td>
+<td>0</td>
+<td>Blank value that represents no key being pressed.</td>
+</tr>
+<tr>
+<td>Backspace</td>
+<td>8</td>
+<td>The Backspace key.</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>9</td>
+<td>The Tab key.</td>
+</tr>
+<tr>
+<td>Clear</td>
+<td>12</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Return</td>
+<td>13</td>
+<td>Better known as enter.</td>
+</tr>
+<tr>
+<td>Pause</td>
+<td>19</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>27</td>
+<td>The Escape key.</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>32</td>
+<td>The Space key.</td>
+</tr>
+<tr>
+<td>QuotedDouble</td>
+<td>34</td>
+<td>The " key.</td>
+</tr>
+<tr>
+<td>Hash</td>
+<td>35</td>
+<td>The # key.</td>
+</tr>
+<tr>
+<td>Dollar</td>
+<td>36</td>
+<td>The $ key.</td>
+</tr>
+<tr>
+<td>Percent</td>
+<td>37</td>
+<td>The % key.</td>
+</tr>
+<tr>
+<td>Ampersand</td>
+<td>38</td>
+<td>The &amp; key.</td>
+</tr>
+<tr>
+<td>Quote</td>
+<td>39</td>
+<td>The ' key.</td>
+</tr>
+<tr>
+<td>LeftParenthesis</td>
+<td>40</td>
+<td>The ( key.</td>
+</tr>
+<tr>
+<td>RightParenthesis</td>
+<td>41</td>
+<td>The ) key.</td>
+</tr>
+<tr>
+<td>Asterisk</td>
+<td>42</td>
+<td>The * key.</td>
+</tr>
+<tr>
+<td>Plus</td>
+<td>43</td>
+<td>The + key.</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>44</td>
+<td>The , key.</td>
+</tr>
+<tr>
+<td>Minus</td>
+<td>45</td>
+<td>The - key.</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>46</td>
+<td>The . key.</td>
+</tr>
+<tr>
+<td>Slash</td>
+<td>47</td>
+<td>The `` key.</td>
+</tr>
+<tr>
+<td>Zero</td>
+<td>48</td>
+<td>The 0 key.</td>
+</tr>
+<tr>
+<td>One</td>
+<td>49</td>
+<td>The 1 key.</td>
+</tr>
+<tr>
+<td>Two</td>
+<td>50</td>
+<td>The 2 key.</td>
+</tr>
+<tr>
+<td>Three</td>
+<td>51</td>
+<td>The 3 key.</td>
+</tr>
+<tr>
+<td>Four</td>
+<td>52</td>
+<td>The 4 key.</td>
+</tr>
+<tr>
+<td>Five</td>
+<td>53</td>
+<td>The 5 key.</td>
+</tr>
+<tr>
+<td>Six</td>
+<td>54</td>
+<td>The 6 key.</td>
+</tr>
+<tr>
+<td>Seven</td>
+<td>55</td>
+<td>The 7 key.</td>
+</tr>
+<tr>
+<td>Eight</td>
+<td>56</td>
+<td>The 8 key.</td>
+</tr>
+<tr>
+<td>Nine</td>
+<td>57</td>
+<td>The 9 key.</td>
+</tr>
+<tr>
+<td>Colon</td>
+<td>58</td>
+<td>The : key.</td>
+</tr>
+<tr>
+<td>Semicolon</td>
+<td>59</td>
+<td>The ; key.</td>
+</tr>
+<tr>
+<td>LessThan</td>
+<td>60</td>
+<td>The &lt; key.</td>
+</tr>
+<tr>
+<td>Equals</td>
+<td>61</td>
+<td>The = key.</td>
+</tr>
+<tr>
+<td>GreaterThan</td>
+<td>62</td>
+<td>The &gt; key.</td>
+</tr>
+<tr>
+<td>Question</td>
+<td>63</td>
+<td>The ? key.</td>
+</tr>
+<tr>
+<td>At</td>
+<td>64</td>
+<td>The @ key.</td>
+</tr>
+<tr>
+<td>LeftBracket</td>
+<td>91</td>
+<td>The [ key.</td>
+</tr>
+<tr>
+<td>BackSlash</td>
+<td>92</td>
+<td>The \ key.</td>
+</tr>
+<tr>
+<td>RightBracket</td>
+<td>93</td>
+<td>The ] key.</td>
+</tr>
+<tr>
+<td>Caret</td>
+<td>94</td>
+<td>The ^ key.</td>
+</tr>
+<tr>
+<td>Underscore</td>
+<td>95</td>
+<td>The _ key.</td>
+</tr>
+<tr>
+<td>Backquote</td>
+<td>96</td>
+<td>The ` key.</td>
+</tr>
+<tr>
+<td>A</td>
+<td>97</td>
+<td>The A key.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>98</td>
+<td>The B key.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>99</td>
+<td>The C key.</td>
+</tr>
+<tr>
+<td>D</td>
+<td>100</td>
+<td>The D key.</td>
+</tr>
+<tr>
+<td>E</td>
+<td>101</td>
+<td>The E key.</td>
+</tr>
+<tr>
+<td>F</td>
+<td>102</td>
+<td>The F key.</td>
+</tr>
+<tr>
+<td>G</td>
+<td>103</td>
+<td>The G key.</td>
+</tr>
+<tr>
+<td>H</td>
+<td>104</td>
+<td>The H key.</td>
+</tr>
+<tr>
+<td>I</td>
+<td>105</td>
+<td>The I key.</td>
+</tr>
+<tr>
+<td>J</td>
+<td>106</td>
+<td>The J key.</td>
+</tr>
+<tr>
+<td>K</td>
+<td>107</td>
+<td>The K key.</td>
+</tr>
+<tr>
+<td>L</td>
+<td>108</td>
+<td>The L key.</td>
+</tr>
+<tr>
+<td>M</td>
+<td>109</td>
+<td>The M key.</td>
+</tr>
+<tr>
+<td>N</td>
+<td>110</td>
+<td>The N key.</td>
+</tr>
+<tr>
+<td>O</td>
+<td>111</td>
+<td>The O key.</td>
+</tr>
+<tr>
+<td>P</td>
+<td>112</td>
+<td>The P key.</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>113</td>
+<td>The Q key.</td>
+</tr>
+<tr>
+<td>R</td>
+<td>114</td>
+<td>The R key.</td>
+</tr>
+<tr>
+<td>S</td>
+<td>115</td>
+<td>The S key.</td>
+</tr>
+<tr>
+<td>T</td>
+<td>116</td>
+<td>The T key.</td>
+</tr>
+<tr>
+<td>U</td>
+<td>117</td>
+<td>The U key.</td>
+</tr>
+<tr>
+<td>V</td>
+<td>118</td>
+<td>The V key.</td>
+</tr>
+<tr>
+<td>W</td>
+<td>119</td>
+<td>The W key.</td>
+</tr>
+<tr>
+<td>X</td>
+<td>120</td>
+<td>The X key.</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>121</td>
+<td>The Y key.</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>122</td>
+<td>The Z key.</td>
+</tr>
+<tr>
+<td>LeftCurly</td>
+<td>123</td>
+<td>The { key.</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td>124</td>
+<td>The</td>
+</tr>
+<tr>
+<td>RightCurly</td>
+<td>125</td>
+<td>The } key.</td>
+</tr>
+<tr>
+<td>Tilde</td>
+<td>126</td>
+<td>The ~ key.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>127</td>
+<td>The Del key.</td>
+</tr>
+<tr>
+<td>KeypadZero</td>
+<td>256</td>
+<td>The 0 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadOne</td>
+<td>257</td>
+<td>The 1 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadTwo</td>
+<td>258</td>
+<td>The 2 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadThree</td>
+<td>259</td>
+<td>The 3 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadFour</td>
+<td>260</td>
+<td>The 4 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadFive</td>
+<td>261</td>
+<td>The 5 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadSix</td>
+<td>262</td>
+<td>The 6 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadSeven</td>
+<td>263</td>
+<td>The 7 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadEight</td>
+<td>264</td>
+<td>The 8 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadNine</td>
+<td>265</td>
+<td>The 9 key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadPeriod</td>
+<td>266</td>
+<td>The . key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadDivide</td>
+<td>267</td>
+<td>The `` key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadMultiply</td>
+<td>268</td>
+<td>The * key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadMinus</td>
+<td>269</td>
+<td>The - key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadPlus</td>
+<td>270</td>
+<td>The + key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadEnter</td>
+<td>271</td>
+<td>The Enter key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>KeypadEquals</td>
+<td>272</td>
+<td>The = key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>273</td>
+<td>The ↑ arrow key.</td>
+</tr>
+<tr>
+<td>Down</td>
+<td>274</td>
+<td>The ↓ arrow key.</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>275</td>
+<td>The → arrow key.</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>276</td>
+<td>The ← arrow key.</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>277</td>
+<td>The Insert key.</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>278</td>
+<td>The Home key.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>279</td>
+<td>The End key.</td>
+</tr>
+<tr>
+<td>PageUp</td>
+<td>280</td>
+<td>The PgUp key.</td>
+</tr>
+<tr>
+<td>PageDown</td>
+<td>281</td>
+<td>The PgDown key.</td>
+</tr>
+<tr>
+<td>LeftShift</td>
+<td>304</td>
+<td>The left side Shift key.</td>
+</tr>
+<tr>
+<td>RightShift</td>
+<td>303</td>
+<td>The right side Shift key.</td>
+</tr>
+<tr>
+<td>LeftMeta</td>
+<td>310</td>
+<td>The left side Meta key.</td>
+</tr>
+<tr>
+<td>RightMeta</td>
+<td>309</td>
+<td>The right side Meta key.</td>
+</tr>
+<tr>
+<td>LeftAlt</td>
+<td>308</td>
+<td>The left side Alt key.</td>
+</tr>
+<tr>
+<td>RightAlt</td>
+<td>307</td>
+<td>The right side Alt key.</td>
+</tr>
+<tr>
+<td>LeftControl</td>
+<td>306</td>
+<td>The left side Ctrl key.</td>
+</tr>
+<tr>
+<td>RightControl</td>
+<td>305</td>
+<td>The right side Ctrl key.</td>
+</tr>
+<tr>
+<td>CapsLock</td>
+<td>301</td>
+<td>The Caps Lock key.</td>
+</tr>
+<tr>
+<td>NumLock</td>
+<td>300</td>
+<td>The Num Lock key on the keypad cluster.</td>
+</tr>
+<tr>
+<td>ScrollLock</td>
+<td>302</td>
+<td>The Scr Lock key.</td>
+</tr>
+<tr>
+<td>LeftSuper</td>
+<td>311</td>
+<td>The left side Super key. Better known as the Windows key or Cmd key.</td>
+</tr>
+<tr>
+<td>RightSuper</td>
+<td>312</td>
+<td>The right side Super key. Better known as the Windows key or Cmd key.</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>313</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Compose</td>
+<td>314</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Help</td>
+<td>315</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Print</td>
+<td>316</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>SysReq</td>
+<td>317</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Break</td>
+<td>318</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Menu</td>
+<td>319</td>
+<td>The Menu key.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>320</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Euro</td>
+<td>321</td>
+<td>The € key. Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>Undo</td>
+<td>322</td>
+<td>Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>282</td>
+<td>The F1 key.</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>283</td>
+<td>The F2 key.</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>284</td>
+<td>The F3 key.</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>285</td>
+<td>The F4 key.</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>286</td>
+<td>The F5 key.</td>
+</tr>
+<tr>
+<td>F6</td>
+<td>287</td>
+<td>The F6 key.</td>
+</tr>
+<tr>
+<td>F7</td>
+<td>288</td>
+<td>The F7 key.</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>289</td>
+<td>The F8 key.</td>
+</tr>
+<tr>
+<td>F9</td>
+<td>290</td>
+<td>The F9 key.</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>291</td>
+<td>The F10 key.</td>
+</tr>
+<tr>
+<td>F11</td>
+<td>292</td>
+<td>The F11 key.</td>
+</tr>
+<tr>
+<td>F12</td>
+<td>293</td>
+<td>The F12 key.</td>
+</tr>
+<tr>
+<td>F13</td>
+<td>294</td>
+<td>The F13 key. Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>F14</td>
+<td>295</td>
+<td>The F14 key. Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>F15</td>
+<td>296</td>
+<td>The F15 key. Only present on certain keyboards.</td>
+</tr>
+<tr>
+<td>World0</td>
+<td>160</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World1</td>
+<td>161</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World2</td>
+<td>162</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World3</td>
+<td>163</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World4</td>
+<td>164</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World5</td>
+<td>165</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World6</td>
+<td>166</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World7</td>
+<td>167</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World8</td>
+<td>168</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World9</td>
+<td>169</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World10</td>
+<td>170</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World11</td>
+<td>171</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World12</td>
+<td>172</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World13</td>
+<td>173</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World14</td>
+<td>174</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World15</td>
+<td>175</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World16</td>
+<td>176</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World17</td>
+<td>177</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World18</td>
+<td>178</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World19</td>
+<td>179</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World20</td>
+<td>180</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World21</td>
+<td>181</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World22</td>
+<td>182</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World23</td>
+<td>183</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World24</td>
+<td>184</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World25</td>
+<td>185</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World26</td>
+<td>186</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World27</td>
+<td>187</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World28</td>
+<td>188</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World29</td>
+<td>189</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World30</td>
+<td>190</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World31</td>
+<td>191</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World32</td>
+<td>192</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World33</td>
+<td>193</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World34</td>
+<td>194</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World35</td>
+<td>195</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World36</td>
+<td>196</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World37</td>
+<td>197</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World38</td>
+<td>198</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World39</td>
+<td>199</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World40</td>
+<td>200</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World41</td>
+<td>201</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World42</td>
+<td>202</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World43</td>
+<td>203</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World44</td>
+<td>204</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World45</td>
+<td>205</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World46</td>
+<td>206</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World47</td>
+<td>207</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World48</td>
+<td>208</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World49</td>
+<td>209</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World50</td>
+<td>210</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World51</td>
+<td>211</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World52</td>
+<td>212</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World53</td>
+<td>213</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World54</td>
+<td>214</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World55</td>
+<td>215</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World56</td>
+<td>216</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World57</td>
+<td>217</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World58</td>
+<td>218</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World59</td>
+<td>219</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World60</td>
+<td>220</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World61</td>
+<td>221</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World62</td>
+<td>222</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World63</td>
+<td>223</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World64</td>
+<td>224</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World65</td>
+<td>225</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World66</td>
+<td>226</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World67</td>
+<td>227</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World68</td>
+<td>228</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World69</td>
+<td>229</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World70</td>
+<td>230</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World71</td>
+<td>231</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World72</td>
+<td>232</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World73</td>
+<td>233</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World74</td>
+<td>234</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World75</td>
+<td>235</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World76</td>
+<td>236</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World77</td>
+<td>237</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World78</td>
+<td>238</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World79</td>
+<td>239</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World80</td>
+<td>240</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World81</td>
+<td>241</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World82</td>
+<td>242</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World83</td>
+<td>243</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World84</td>
+<td>244</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World85</td>
+<td>245</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World86</td>
+<td>246</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World87</td>
+<td>247</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World88</td>
+<td>248</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World89</td>
+<td>249</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World90</td>
+<td>250</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World91</td>
+<td>251</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World92</td>
+<td>252</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World93</td>
+<td>253</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World94</td>
+<td>254</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>World95</td>
+<td>255</td>
+<td>Generally not used.</td>
+</tr>
+<tr>
+<td>ButtonX</td>
+<td>1000</td>
+<td>Gamepad X button.</td>
+</tr>
+<tr>
+<td>ButtonY</td>
+<td>1001</td>
+<td>Gamepad Y button.</td>
+</tr>
+<tr>
+<td>ButtonA</td>
+<td>1002</td>
+<td>Gamepad A button.</td>
+</tr>
+<tr>
+<td>ButtonB</td>
+<td>1003</td>
+<td>Gamepad B button.</td>
+</tr>
+<tr>
+<td>ButtonR1</td>
+<td>1004</td>
+<td>Gamepad R1 button.</td>
+</tr>
+<tr>
+<td>ButtonL1</td>
+<td>1005</td>
+<td>Gamepad L1 button.</td>
+</tr>
+<tr>
+<td>ButtonR2</td>
+<td>1006</td>
+<td>Gamepad R2 button.</td>
+</tr>
+<tr>
+<td>ButtonL2</td>
+<td>1007</td>
+<td>Gamepad L2 button.</td>
+</tr>
+<tr>
+<td>ButtonR3</td>
+<td>1008</td>
+<td>Gamepad R3 button.</td>
+</tr>
+<tr>
+<td>ButtonL3</td>
+<td>1009</td>
+<td>Gamepad L3 button.</td>
+</tr>
+<tr>
+<td>ButtonStart</td>
+<td>1010</td>
+<td>Gamepad Start button.</td>
+</tr>
+<tr>
+<td>ButtonSelect</td>
+<td>1011</td>
+<td>Gamepad Select button.</td>
+</tr>
+<tr>
+<td>DPadLeft</td>
+<td>1012</td>
+<td>Left arrow on a gamepad D-pad.</td>
+</tr>
+<tr>
+<td>DPadRight</td>
+<td>1013</td>
+<td>Right arrow on a gamepad D-pad.</td>
+</tr>
+<tr>
+<td>DPadUp</td>
+<td>1014</td>
+<td>Up arrow on a gamepad D-pad.</td>
+</tr>
+<tr>
+<td>DPadDown</td>
+<td>1015</td>
+<td>Down arrow on a gamepad D-pad.</td>
+</tr>
+<tr>
+<td>Thumbstick1</td>
+<td>1016</td>
+<td>Gamepad primary thumbstick.</td>
+</tr>
+<tr>
+<td>Thumbstick2</td>
+<td>1017</td>
+<td>Gamepad secondary thumbstick.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../guide/basic_example_pong/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basic Example: Pong!" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Basic Example: Pong!
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../display/" class="md-footer__link md-footer__link--next" aria-label="Next: display" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              display
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>

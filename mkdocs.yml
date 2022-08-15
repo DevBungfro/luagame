@@ -9,16 +9,32 @@ repo_name: devbungfro/luagame
 nav:
   - Home: index.md
   - Guide:
-      - Installation: Guide/installation.md
-      - Basic Example: Guide/basic_example.md
+      - Installation: guide/installation.md
+      - Basic Example: guide/basic_example.md
+      - "Basic Example: Pong!": guide/basic_example_pong.md
+  - API:
+      - luagame: api/luagame.md
+      - display: api/display.md
+      - draw: api/draw.md
+      - sprite: api/sprite.md
+      - font: api/font.md
+      - key: api/key.md
 
 theme:
   name: material
   features:
     - content.code.annotate
   palette:
-    scheme: slate
-    primary: blue
+   
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
   favicon: assets/icon.png
 

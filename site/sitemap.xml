@@ -2,17 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://luagame.bungfro.com/</loc>
-         <lastmod>2022-08-14</lastmod>
+         <lastmod>2022-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://luagame.bungfro.com/Guide/basic_example/</loc>
-         <lastmod>2022-08-14</lastmod>
+         <loc>https://luagame.bungfro.com/api/display/</loc>
+         <lastmod>2022-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://luagame.bungfro.com/Guide/installation/</loc>
-         <lastmod>2022-08-14</lastmod>
+         <loc>https://luagame.bungfro.com/api/draw/</loc>
+         <lastmod>2022-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://luagame.bungfro.com/api/font/</loc>
+         <lastmod>2022-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://luagame.bungfro.com/api/key/</loc>
+         <lastmod>2022-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://luagame.bungfro.com/api/luagame/</loc>
+         <lastmod>2022-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://luagame.bungfro.com/api/sprite/</loc>
+         <lastmod>2022-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://luagame.bungfro.com/guide/basic_example/</loc>
+         <lastmod>2022-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://luagame.bungfro.com/guide/basic_example_pong/</loc>
+         <lastmod>2022-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://luagame.bungfro.com/guide/installation/</loc>
+         <lastmod>2022-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
