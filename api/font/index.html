@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://luagame.bungfro.com/Guide/basic_example/">
+        <link rel="canonical" href="https://luagame.bungfro.com/api/font/">
       
       <link rel="icon" href="../../assets/icon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
     
     
       
-        <title>Basic Example - Luagame</title>
+        <title>font - Luagame</title>
       
     
     
@@ -23,10 +23,6 @@
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#2094f3">
         
       
       
@@ -53,12 +49,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -94,12 +94,34 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basic Example
+              font
             
           </span>
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -217,14 +239,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -247,8 +267,128 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
+      <a href="../../guide/installation/" class="md-nav__link">
         Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/basic_example/" class="md-nav__link">
+        Basic Example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/basic_example_pong/" class="md-nav__link">
+        Basic Example: Pong!
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../luagame/" class="md-nav__link">
+        luagame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../display/" class="md-nav__link">
+        display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../draw/" class="md-nav__link">
+        draw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprite/" class="md-nav__link">
+        sprite
       </a>
     </li>
   
@@ -269,9 +409,23 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Basic Example
+        font
       </a>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key/" class="md-nav__link">
+        key
+      </a>
     </li>
   
 
@@ -313,18 +467,9 @@
                 
 
 
-  <h1>Basic Example</h1>
+  <h1>font</h1>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This documentation assumes that the <code>luagame</code> module is in <code>ReplicatedStorage</code></p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">luagame</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">.</span><span class="n">luagame</span><span class="p">)</span>
-<span class="n">luagame</span><span class="p">.</span><span class="n">init</span><span class="p">()</span> <span class="c1">-- Initialize luagame</span>
-</code></pre></div>
-<p>We just initialized luagame! Now let's draw our first rectangle.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span> <span class="n">rect</span> <span class="o">=</span> <span class="n">luagame</span><span class="p">.</span><span class="n">draw</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="n">luagame</span><span class="p">.</span><span class="n">main_gui</span><span class="p">.</span><span class="n">BG</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span><span class="mf">.5</span><span class="p">,</span> <span class="n">Vector2</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mf">.5</span><span class="p">,</span><span class="mf">.5</span><span class="p">))</span>
-</code></pre></div>
+
 
 
 
@@ -343,7 +488,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
+        <a href="../sprite/" class="md-footer__link md-footer__link--prev" aria-label="Previous: sprite" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -352,11 +497,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Installation
+              sprite
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../key/" class="md-footer__link md-footer__link--next" aria-label="Next: key" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              key
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
